@@ -1,0 +1,382 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 48px;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 350;
+    font-size: 52px;
+    color: #1a2235;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 30px auto 0px;
+    background-color: #1a2235;
+}
+
+h3 {
+    font-weight: 370;
+    font-size: 22px;
+}
+
+img{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: black;
+    border-color: #000000cc;
+    border-width: 3px;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color:#ffffff;
+    border-color: #ffffff;
+    color: #000000de;
+}
+
+.btn-primary:focus {
+    background-color:#ffffff;
+    border-color: #ffffff;
+    color: #000000de;
+}
+
+.page {
+    position: relative;
+    height: 100vh;
+}
+
+.viewport-picture {
+    background-repeat: no-repeat; 
+    background-size: cover;
+    width: 100%; 
+    height: 100%;   
+}
+
+.main-picture {
+    background-image: url('https://sun9-35.userapi.com/impg/hI-ySihYh7Tfw4KHUBoGgm1glG0U06TrgEfmVg/Dx9TnpyTaJg.jpg?size=1280x817&quality=96&sign=b621b299d26fe8154702fa3d8c6a9318&type=album');
+    background-repeat: no-repeat; 
+    background-size: cover;
+    width: 100%; 
+    height: 100%;
+}
+
+.page-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* z-index: 1000; */
+    background-color: rgba(0, 0, 0, .4); 
+    bottom: 0;
+    color: white;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.main-menu {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+
+
+.menu-list {
+    display: flex;
+    gap: 2em;
+    margin: 0;
+}
+
+.menu-list li {
+    list-style-type: none;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+}
+
+.menu-list a:hover {
+    color: #ffffff;
+}
+
+.menu-list a:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1.4px;
+    background-color: #ffffff;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    transition: opacity .16s linear;
+}
+
+.menu-list a:hover:after {
+    opacity: 1;
+}
+
+.navbar-brand {
+    color: #ffffffdc;
+    padding: 0px 2px;
+    
+}
+
+.navbar-brand:hover {
+    color: #ffffff;
+}
+
+.bi-list {
+    display: none;
+}
+
+.promo {
+    background: linear-gradient(#ffffff,#dcf5ff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    text-align: center;
+    min-height: 100vh;
+    height: auto;
+}
+
+.promo p{
+    font-size: medium;
+    margin: .5rem;
+}
+
+.services {
+    display: grid;
+    margin-top: 2rem;
+    --cols-num: 4;
+    grid-template-columns: repeat(var(--cols-num), 230px);
+    grid-template-rows: auto;
+    column-gap: 2.5rem;
+    row-gap: 1rem;
+}
+
+.services-card {
+    height: 415px;
+    width: 255px;
+    box-shadow: 0 2px 20px rgb(0 0 0 / 25%);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.services-card img {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.services-card:hover {
+    box-shadow: 0 2px 20px 15px rgb(0 0 0 / 16%);
+}
+
+.order {
+    max-height: 70vh;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    background-image: url('https://sun9-12.userapi.com/impg/gD6WAdWMu6BVeSrwxDm3YzXGloLvOm5re4xFOg/sDKw4-J7Xzk.jpg?size=1280x817&quality=96&sign=5435db3cf68527dd5911d1a650e75b7d&type=album');
+}
+
+.request {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .4);
+    bottom: 0;
+    color: #ffffff;
+    padding: 5%;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacts {
+    min-height: 25vh;
+    background-color: rgba(0, 0, 0, 0.932);
+    padding: 5vh 0vw 5vh 10vw;
+}
+
+.contacts h5 {
+    color: white;
+}
+
+.contacts-list {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contact {
+    margin: 15px 13vw 0 0;
+    display: flex;
+}
+
+.contact img {
+    margin: 3px 3px 0 0;
+    width: 19.2px;
+    height: 19.2px;
+}
+
+.contact li {
+    list-style-type: none;
+}
+
+.contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #ffffff;
+}
+
+.small-inscription {
+    color: rgba(203, 214, 214, 0.61);
+    margin-top: 10px;
+    font-size: small;
+}
+
+.fade {
+    color: #1a2235;
+}
+
+.fade .btn-primary {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: #1a2235b9;
+    border-width: 3px;
+    color: #1a2235;
+}
+
+.fade .btn-primary:hover {
+    background-color:#1a2235;
+    border-color: #1a2235;
+    color: #e0f6ffde;
+}
+
+.fade .btn-primary:focus {
+    background-color:#1a2235;
+    border-color: #1a2235;
+    color: #e0f6ffde;
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .services {
+        --cols-num: 2;
+    }
+}
+
+@media (max-width: 970px) {
+    .main-menu {
+        flex-wrap: wrap;
+    }
+
+    .bi-list {
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
+    }
+
+    .menu-list {
+        --menu-li-height: 1rem;
+        --menu-li-gap: .5rem;
+        --menu-elems-num: 3;
+        width: 100%;
+        height: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--menu-li-gap);
+        padding: 0;
+        overflow: hidden;
+        transition: height .7s;
+    }
+
+    .menu-list.show {
+        margin-top: 5px;
+        height: calc((var(--menu-li-height) + var(--menu-li-gap)) * var(--menu-elems-num));
+    }
+
+    .menu-list li {
+        height: var(--menu-li-height);
+    }
+
+    .promo {
+        height: auto;
+    }
+
+    .services {
+        --cols-num: 1;
+    }
+
+    .request {
+        width: 100vw;
+    }
+
+    .contacts-list {
+        display: block;
+    }
+}
+
+/* my code */
+.container{ 
+    margin: 0 auto;
+    min-width: 350px;
+    max-width: 800px;
+ }
+
+ /* Flex container */
+.control{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.control button{
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-primary {
+    background-color: rgb(0, 0, 0);
+}
